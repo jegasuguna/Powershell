@@ -1,5 +1,5 @@
 
-$file = "https://github.com/jegasuguna/Powershell/blob/master/books.xlsx"
+$file = "D:\suguna\books.xlsx"
 $sheetName = "Sheet1"
 
 $objExcel = New-Object -ComObject Excel.Application
