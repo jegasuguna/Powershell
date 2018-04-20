@@ -1,5 +1,5 @@
 
-$file = "D:\Suguna\Book2.xlsx"
+$file = "D:\Suguna\Books.xlsx"
 $sheetName = "Sheet1"
 
 $objExcel = New-Object -ComObject Excel.Application
