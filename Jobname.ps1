@@ -3,7 +3,8 @@ $file = "D:\Suguna\Book2.xlsx"
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
-
+$workbook = $objExcel.Workbooks.Open($file)
+$sheet = $workbook.Worksheets.Item($sheetName)
 $objExcel.Visible=$false
 #Count max row
 $rowMax = ($sheet.UsedRange.Rows).count
