@@ -1,6 +1,5 @@
 ﻿#Set-ExecutionPolicy Unrestricted
-param(
-    [parameter(Mandatory=$true)] [url]$file)
+Param([string]$file = "C:\TeamCity\Books.xlsx")
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
@@ -19,7 +18,7 @@ $name = $sheet.Cells.Item($rowName+$i,$colName).text
 $parameters = $sheet.Cells.Item($rowParameters+$i,$colParameters).text
 
 Write-Host ($name+"   "+$parameters)
-
+Write-Host $PSScriptRoot
 }
 #close excel file
 $objExcel.quit()
