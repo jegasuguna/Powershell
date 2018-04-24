@@ -1,5 +1,6 @@
 ﻿#Set-ExecutionPolicy Unrestricted
-Param([string]$file)
+param(
+    [parameter(Mandatory=$true)] [string]$file)
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
