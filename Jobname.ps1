@@ -1,4 +1,4 @@
-﻿Set-ExecutionPolicy Unrestricted
+﻿#Set-ExecutionPolicy Unrestricted
 Param([string]$file)
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
