@@ -1,5 +1,4 @@
-﻿#Set-ExecutionPolicy Unrestricted
-
+﻿Set-ExecutionPolicy Unrestricted
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
