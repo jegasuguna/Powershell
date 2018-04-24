@@ -1,5 +1,5 @@
 ﻿Set-ExecutionPolicy Unrestricted
-Param([string][string]$computerName="PC312481",$file = "C:\TeamCity\Books.xlsx")
+Param([string][string]$computerName,$file)
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
