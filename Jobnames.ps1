@@ -1,6 +1,6 @@
 ﻿#Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
-param([string] $ExcelFile)
-
+$File="Powershell/books.xlsx"
+$ExcelFile = "${PSScriptRoot}\${File}.xlsx"
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
