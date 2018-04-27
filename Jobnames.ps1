@@ -1,5 +1,5 @@
 ﻿#Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
-$File="https://github.com/jegasuguna/Powershell.git"
+$File="https://github.com/jegasuguna/Powershell.git/bookscs"
 $ExcelFile = "${PSScriptRoot}\${File}.csv"
 $sheetName = "Sheet1"
 #Create an instance of Excel.Application and Open Excel file
