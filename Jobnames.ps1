@@ -2,10 +2,10 @@
 param([string]$excelfile)
 $sheetName = "Sheet1"
 Write-Host $PSScriptRoot
-$file= Join-Path -Path $excelfile -ChildPath $PSScriptRoot
+#$file= Join-Path -Path $excelfile -ChildPath $PSScriptRoot
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
-$workbook = $objExcel.Workbooks.Open($file)
+$workbook = $objExcel.Workbooks.Open($excelfile)
 $sheet = $workbook.Worksheets.Item($sheetName)
 $objExcel.Visible=$false
 #Count max row
