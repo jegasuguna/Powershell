@@ -1,6 +1,7 @@
 ﻿#Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
-$sheetName = "Sheet1"
-$sheetname= Join-Path $PSScriptRoot "bookscs.csv"
+
+$ExcelFile= Import-Csv -Path D:\suguna\Books.csv
+$sheetName= Join-Path $PSScriptRoot "bookscs.csv"
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
 $objworkbook = $objExcel.Workbooks.Open($ExcelFile)
