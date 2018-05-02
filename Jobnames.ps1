@@ -1,7 +1,7 @@
 #Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
 param([string]$excelfile)
 $sheetName = "Sheet1"
-$file= Join-Path -Path $_
+$file= Join-Path -Path $excelfile -ChildPath $_
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
 $workbook = $objExcel.Workbooks.Open($file)
