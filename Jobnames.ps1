@@ -1,7 +1,7 @@
 #Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
-$excelfile = "D:\Suguna\Books.xlsx"
+param([string]$excelfile)
 $sheetName = "Sheet1"
-$file= Join-Path -Path "D:\Suguna" -ChildPath $PSScriptRoot
+$file= Join-Path -Path $excelfile -ChildPath $PSScriptRoot
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
 $workbook = $objExcel.Workbooks.Open($file)
