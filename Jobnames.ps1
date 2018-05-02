@@ -1,10 +1,10 @@
-﻿#Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
-
-$ExcelFile= Import-Csv -Path "D:\suguna\Bookscs.csv"
-$sheetName= "Sheet1"
+#Set-ExecutionPolicy Unrestricted $objWorkbook = $objExcel.Workbooks.Open $Log_path"\ $Log_name"
+$excelfile = "D:\Suguna\Books.xlsx"
+$sheetName = "Sheet1"
+$file= Join-Path -Path "D:\Suguna\Books.xlsx" -ChildPath $PSScriptRoot
 #Create an instance of Excel.Application and Open Excel file
 $objExcel = New-Object -ComObject Excel.Application
-$objworkbook = $objExcel.Workbooks.Open($ExcelFile)
+$workbook = $objExcel.Workbooks.Open($file)
 $sheet = $workbook.Worksheets.Item($sheetName)
 $objExcel.Visible=$false
 #Count max row
